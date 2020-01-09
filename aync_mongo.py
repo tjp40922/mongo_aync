@@ -50,6 +50,10 @@ class CombineShop:
             row['deleted'] = 0
             await self.queue.put(row)
 
+        #cursor = db.test_collection.find({ 'name': { '$lt': 5}}).sort( 'i')
+
+        #for document in await cursor.to_list(length= 100):
+            
         self.finished = True
 
     async def write(self):
